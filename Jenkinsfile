@@ -13,10 +13,11 @@ pipeline {
         stage('dcil') {
             agent { docker { image 'python:3.5.1' } }
             when {
-                branch 'dcil' 
+                branch 'dcil'
             }
             steps {
                 sh 'python --version'
+                sh 'echo "hello world"'
             }
         }
         stage('production') {
