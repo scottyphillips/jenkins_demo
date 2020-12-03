@@ -8,6 +8,7 @@ pipeline {
             }
             steps {
                 sh 'python --version'
+                sh 'python hello_world.py'
             }
         }
         stage('dcil') {
@@ -17,7 +18,7 @@ pipeline {
             }
             steps {
                 sh 'python --version'
-                sh 'echo "hello world"'
+                sh 'python hello_world.py'
             }
         }
         stage('production') {
